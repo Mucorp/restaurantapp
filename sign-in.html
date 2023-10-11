@@ -18,7 +18,7 @@
       href="assets/vendor_assets/css/bootstrap/bootstrap.css"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dist/output.css" />
 
     <!-- endinject -->
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
@@ -27,6 +27,8 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v3.0.0/css/line.css"
     />
+    <link rel="stylesheet" href="assets/vendor_assets/css/numpad.css" />
+    <script src="assets/theme_assets/js/numpad.js"></script>
   </head>
 
   <body>
@@ -59,39 +61,25 @@
                   <div class="card-body">
                     <div class="edit-profile__body">
                       <div class="edit-profile__body">
-                        <div class="form-group mb-20">
-                          <label for="name">name</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="name"
-                            placeholder="Full Name"
-                          />
+                        <div class="form-group mb-4">
+                          <label class="text-black" for="name"
+                            >Select User</label
+                          >
+                          <select
+                            class="js-example-basic-single form-control"
+                            name="state"
+                          >
+                            <option value="AL">User 1</option>
+                            ...
+                            <option value="WY">User 2</option>
+                          </select>
                         </div>
-                        <div class="form-group mb-20">
-                          <label for="username">username</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="username"
-                            placeholder="Username"
-                          />
-                        </div>
-                        <div class="form-group mb-20">
-                          <label for="email">Email Adress</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="email"
-                            placeholder="name@example.com"
-                          />
-                        </div>
-                        <div class="form-group mb-15">
+                        <div class="form-group mb-4">
                           <label for="password-field">password</label>
                           <div class="position-relative">
                             <input
-                              id="password-field"
-                              type="password"
+                              id="passwordField"
+                              type="text"
                               class="form-control"
                               name="password"
                               placeholder="Password"
@@ -101,35 +89,14 @@
                             ></div>
                           </div>
                         </div>
-                        <div class="admin-condition">
-                          <div class="checkbox-theme-default custom-checkbox">
-                            <input
-                              class="checkbox"
-                              type="checkbox"
-                              id="admin-1"
-                            />
-                            <label for="admin-1">
-                              <span class="checkbox-text"
-                                >Creating an account means you’re okay with our
-                                <a href="#" class="color-primary"
-                                  >Terms of Service</a
-                                >
-                                and
-                                <a href="#" class="color-primary"
-                                  >Privacy Policy</a
-                                >
-                                my preference</span
-                              >
-                            </label>
-                          </div>
-                        </div>
+
                         <div
                           class="admin__button-group button-group d-flex pt-1 justify-content-md-start justify-content-center"
                         >
                           <button
                             class="btn btn-primary btn-default w-100 btn-squared text-capitalize lh-normal px-50 signIn-createBtn"
                           >
-                            Create Account
+                            Sign In
                           </button>
                         </div>
                       </div>
@@ -177,12 +144,7 @@
                       </ul>
                     </div>
                   </div> -->
-                  <div class="admin-topbar">
-                    <p class="mb-0">
-                      Don't have an account?
-                      <a href="login.html" class="color-primary"> Sign In </a>
-                    </p>
-                  </div>
+
                   <!-- End: .admin-topbar  -->
                 </div>
                 <!-- End: .card -->
@@ -226,6 +188,12 @@
     <script src="assets/vendor_assets/js/select2.full.min.js"></script>
     <script src="assets/vendor_assets/js/slick.min.js"></script>
     <script src="assets/theme_assets/js/main.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        // (C1) BASIC NUMPAD
+        numpad.attach({ target: document.getElementById("passwordField") });
+      });
+    </script>
 
     <!-- endinject-->
   </body>

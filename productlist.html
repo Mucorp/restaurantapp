@@ -81,7 +81,7 @@
         </nav>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 relative max">
               <!-- Filter Controls - Simple Mode -->
 
               <div class="gallery-filter mb-sm-50 mb-30">
@@ -612,11 +612,32 @@
                   </div>
                 </div>
               </div>
+              <div
+                class="dtFooter gap-4 -ml-6 bg-[#f4f5f7] p-4 pr-14 w-full flex justify-between fixed bottom-0"
+              >
+                <div class="btns-left flex gap-4">
+                  <button
+                    class="dtExit bg-redish font-medium text-md sm:text-xl text-white rounded-3xl px-3 sm:px-6 sm:py-1"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="dtExit bg-redish font-medium text-md sm:text-xl text-white rounded-3xl px-2 sm:px-6 sm:py-1 whitespace-nowrap"
+                  >
+                    Clear Select
+                  </button>
+                </div>
+                <button
+                  class="dtOperations bg-greenish font-medium text-md sm:text-xl text-white rounded-3xl px-2 sm:px-6 sm:py-1 whitespace-nowrap"
+                >
+                  Selected Add
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer-wrapper ps-0">
+      <!-- <footer class="footer-wrapper ps-0">
         <div class="footer-wrapper__inside">
           <div class="container-fluid">
             <div class="row">
@@ -631,7 +652,7 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer> -->
     </main>
     <div id="overlayer">
       <div class="loader-overlay">
